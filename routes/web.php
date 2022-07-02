@@ -16,7 +16,8 @@ use App\Http\Controllers\Web\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('home')->middleware('auth');
+})->name('home')
+    ->middleware('auth');
 
 Route::get('/login', [AuthController::class,'showLoginForm'])
     ->name('auth.show.login')
